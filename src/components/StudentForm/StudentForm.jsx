@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Student {
     constructor(github = '') {
-        this.github = github;
+        this.github_name = github;
     }
 };
 
@@ -20,8 +20,8 @@ class StudentForm extends Component {
         event.preventDefault();
         this.props.addStudent(this.state);
         this.clearStudentFields();
-    }
 
+    }
     // Clear fields of the form by reseting the user
     clearStudentFields = () => {
         this.setState(new Student());
