@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import About from '../About/About';
-import Home from '../Home/Home';
+// import Home from '../Home/Home';
 import './App.css';
 import StudentForm from '../StudentForm/StudentForm';
 import StudentList from '../StudentList/StudentList';
@@ -72,8 +72,8 @@ class App extends Component {
           </header>
           <br />
           {/* <Home /> */}
-          <nav>
-            <ul>
+          <nav className="navBar">
+            <ul className="navBarList">
               <li>
                 <Link to='/'>Home</Link>
               </li>
@@ -82,7 +82,7 @@ class App extends Component {
               </li>
             </ul>
           </nav>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/' component={StudentList} />
           <Route path='/about' component={About} />
           {/* <StudentForm addStudent={this.addStudent} />
           <StudentList getMoreDetails={this.getMoreDetails} studentList={this.state.studentList} />
